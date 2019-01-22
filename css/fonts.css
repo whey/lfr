@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'LetterGothicStdMedium';
+    src: url('../fonts/lfr/LetterGothicStd.eot');
+    src: url('../fonts/lfr/LetterGothicStd.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lfr/LetterGothicStd.woff') format('woff'),
+         url('../fonts/lfr/LetterGothicStd.ttf') format('truetype'),
+         url('../fonts/lfr/LetterGothicStd.svg#LetterGothicStdMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

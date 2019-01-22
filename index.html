@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Official page of New York based progressive rock band Lo-Fi Resistance fronted by Randy McStine.">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title>Lo-Fi Resistance - Official Page</title>
+
+    <!-- Custom Styles -->
+    <link href="css/autobass.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- Third Party Styles -->
+    <link href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Preloader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/queryloader2.js"></script>
+    <script src="js/init_preloader.js"></script>
+
+    <!-- SoundCloud custom viewer Plangular-->
+    <script src="js/vue.min.js"></script>
+	<script src="js/v-plangular.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+  <body class="preloader global-color_sun" data-spy="scroll" data-target=".navbar" id="vm" >
+
+    <!-- Background Pattern -->
+    <div class="bg-pattern bg-pattern_vertical"></div>
+    <!-- Backstretch Carousel -->
+    <div class="backstretch-carousel"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-btn hidden"><i class="fa fa-bars fa-2x"></i></div>
+    <div class="sidebar-overlay hidden"></div>
+    <div class="sidebar sidebar-menu hidden">
+      <div class="sidebar-menu__title">LO-FI RESISTANCE</div>
+      <ul class="sidebar-menu__ul">
+        <li><a href="#welcome"><i class="fa fa-home fa-fw"></i> welcome</a></li>
+        <li><a href="#about"><i class="fa fa-info-circle fa-fw"></i> about</a></li>
+        <li><a href="#photos"><i class="fa fa-image fa-fw"></i> photos</a></li>
+        <li><a href="#discography"><i class="fa fa-users fa-fw"></i> discography</a></li>
+        <li><a href="#tour"><i class="fa fa-asterisk fa-fw"></i> tour</a></li>
+        <li><a href="#contact-us"><i class="fa fa-envelope fa-fw"></i> connect</a></li>
+      </ul>
+    </div>
+
+    <!-- Top Menu -->
+    <div class="navbar navbar-fixed-top navbar-inverse navbar-faded navbar-transparent" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">LO-FI RESISTANCE</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#welcome">welcome</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#photos">photos</a></li>
+            <li><a href="#discography">discography</a></li>
+            <li><a href="#tour">tour</a></li>
+            <li><a href="#contact-us">connect</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Welcome screen -->
+    <div class="site-wrapper site-wrapper_welcome screen" id="welcome">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h1 class="site-wrapper-welcome__title">
+            LO-FI RESISTANCE
+          </h1>
+          <h1 class="site-wrapper-welcome__subtitle">
+          - the age of entitlement -
+          </h1>
+          <p class="site-wrapper-welcome__summary">
+
+          </p>
+          <div class="text-center">
+            <a class="btn btn-transparent site-wrapper-welcome__btn" href="https://lofiresistance.bandcamp.com/album/the-age-of-entitlement" target="_blank">
+              Order from Bandcamp
+            </a>
+
+                <div class="hidden-xs snailfacenotes">
+                            <div class="table mb1 rounded"
+						      v-component="plangular" v-src="'https://soundcloud.com/lo-fi-resistance/program'"
+						      v-class="player.playing == track ? 'bg-red-alpha' : 'bg-darken-2'">
+						      <div class="table-cell p1">
+						        <button class="button-icon" v-on="click: playPause()">
+						          <svg class="vhs-pop-in" v-if="player.playing != track" v-plangular-icon="'play'"></svg>
+						          <svg class="vhs-pop-in" v-if="player.playing == track" v-plangular-icon="'pause'"></svg>
+						        </button>
+						      </div>
+						      <h3 class="table-cell p1 full-width">{{ user.username }} - {{ title }}</h3>
+						      <small class="monospace h6 table-cell px1 nowrap">
+						        {{ currentTime | prettyTime }} / {{ duration | prettyTime }}
+						      </small>
+						   </div>
+				</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About screen -->
+    <div class="site-wrapper site-wrapper_about screen" id="about">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h2 class="title">
+            A little <span class="global-text-color">deeper</span> into our history.
+          </h2>
+          <p class="title__sub-text">
+
+          </p>
+        </div>
+
+        <div class="container">
+        <h3>Biography</h3>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="about__item">
+                <div class="about-item__header">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="about-item__summary g-line-height-lg">
+					<p>Founded in 2009, Lo­-Fi Resistance is the creation of 26 year­ old guitarist, vocalist, and songwriter
+
+					Randy McStine. Once dubbed as a “guitar prodigy,” McStine began playing guitar at the age of
+
+					five and performing publicly at the age of ten. His formative years were spent playing in classic
+
+					rock cover bands, while also pursuing original music. Randy’s early work was focused on guitar-
+					driven, instrumental rock until he began to sing at the age of fifteen. McStine would spend the
+
+					remainder of his teens crafting his voice and songwriting, while continuing to expand his diverse
+
+					musical tastes. </p>
+
+
+					<p>Setting up a small studio in his Upstate New York apartment, McStine started writing and
+
+					recording new material in 2009 with no clear agenda. As he pooled together funding from solo
+
+					performances, guitar lessons, and landscaping work, a new passion and focus was evident as the
+
+					unnamed project continued. Completing a new, full­-length album was now McStine’s goal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="about__item">
+                <div class="about-item__header">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="about-item__summary g-line-height-lg">
+					<p> Initially performing all of the album’s instrumentation himself, Randy eventually decided to bring in
+
+					outside support for the drum tracks. McStine blindly reached out to ex-­Spock’s Beard drummer
+
+					Nick D’Virgilio to fill the seat. D’Virgilio would not only perform on most of the songs, but also offer
+
+					and accept the role of mixing the entire album. Amongst other additional musicians, McStine
+
+					enlisted longtime vocal favorite and personal friend Dug Pinnick (King’s X), for the end of a song
+
+					entitled “Moral Disgrace.” </p>
+					<p>
+					As recording sessions for the new album wrapped up in late 2009, McStine named the project Lo-Fi Resistance. The debut album, A Deep Breath, was released independently on April 6th, 2010.
+
+					Praised for its unique blending of Progressive Rock, Power Pop, and Singer­-songwriter
+
+					influences, the album has drawn comparisons to diverse artists such as Todd Rundgren, Roger
+
+					Waters, Yes, Crowded House, and The Police.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="about__item">
+                <div class="about-item__header">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="about-item__summary g-line-height-lg">
+					<p>  Randy began writing for a second Lo-­Fi Resistance album, Chalk Lines, in April of 2011.
+
+					Undoubtedly the most ambitious project of McStine’s career to date, Chalk Lines both expands on
+
+					and abandons the foundations of the first album. Drummer Gavin Harrison (Porcupine Tree, King
+
+					Crimson) is featured throughout the entire album, along with bassists Colin Edwin (Porcupine
+
+					Tree), John Giblin (Kate Bush), and Dug Pinnick (King’s X) among its roster. Dave Kerzner
+
+					(Sound Of Contact, Kevin Gilbert) splits keyboard duties with McStine, along with co-­writing three
+
+					songs and co­-producing the album. </p>
+
+					<p>Since the release of Chalk Lines, McStine has toured internationally as lead vocalist/co­guitarist of
+
+					The Pink Floyd Experience, along with filling the live guitar role for Sound Of Contact. Lo­Fi
+
+					Resistance is set to release a new record, The Age Of Entitlement, in September 2014. A bold
+
+					and unique entry into the catalog, this collection sees McStine reaching into different musical
+
+					territory once again, pulling influence from '70s electronic music, art­pop, and more. Described as
+
+					a "mini-­album," The Age Of Entitlement will be a digital ­only release.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- photos screen -->
+    <div class="site-wrapper site-wrapper_photos screen" id="photos">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h2 class="title">
+            A picture paints a <span class="global-text-color">thousand</span> words
+          </h2>
+          <p class="title__sub-text">
+
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-alt">
+              <div class="photos__item">
+                <a href="img/photos/1.jpg" data-lightbox="photos-item__img" data-title="© Andy Wright Studio1">
+                  <div class="photos-item__img">
+                    <img class="img-responsive" src="img/photos/1.jpg" alt="...">
+                    <div class="photos-item-img__mask">
+                      <div class="photos-mask__container">
+                        <div class="photos-mask__inner">
+                          <div class="photos-mask-inner__icon animated fadeIn">
+                            <i class="fa fa-image fa-2x"></i>
+                          </div>
+                          <h4 class="photos-mask-inner__title animated fadeInUp"><a href="http://www.andywrightstudios.com/" target="_blank">© Andy Wright Studios</a></h4>
+                          <p class="photos-mask-inner__summary animated fadeInDown">
+                            Randy playing live in Toronto.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4 col-alt">
+              <div class="photos__item">
+                <a href="img/photos/2.jpg" data-lightbox="photos-item__img" data-title="© Scott M Anderson">
+                  <div class="photos-item__img">
+                    <img class="img-responsive" src="img/photos/2.jpg" alt="...">
+                    <div class="photos-item-img__mask">
+                      <div class="photos-mask__container">
+                        <div class="photos-mask__inner">
+                          <div class="photos-mask-inner__icon animated fadeIn">
+                            <i class="fa fa-image fa-2x"></i>
+                          </div>
+                          <h4 class="photos-mask-inner__title animated fadeInUp">© Scott M Anderson</h4>
+                          <p class="photos-mask-inner__summary animated fadeInDown">
+                            Randy playing live in NY.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4 col-alt">
+              <div class="photos__item">
+                <a href="img/photos/3.jpg" data-lightbox="photos-item__img" data-title="© Katie Kanazawich">
+                  <div class="photos-item__img">
+                    <img class="img-responsive" src="img/photos/3.jpg" alt="...">
+                    <div class="photos-item-img__mask">
+                      <div class="photos-mask__container">
+                        <div class="photos-mask__inner">
+                          <div class="photos-mask-inner__icon animated fadeIn">
+                            <i class="fa fa-image fa-2x"></i>
+                          </div>
+                          <h4 class="photos-mask-inner__title animated fadeInUp">© Katie Kanazawich</h4>
+                          <p class="photos-mask-inner__summary animated fadeInDown">
+                            Randy playing live in NY.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- discography screen -->
+    <div class="site-wrapper site-wrapper_discography screen" id="discography">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h2 class="title">
+            Discography
+          </h2>
+          <p class="title__sub-text">
+
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- Carousel -->
+              <div id="discography__carousel" class="carousel slide" data-ride="carousel" data-interval="9999999">
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#discography__carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#discography__carousel" data-slide-to="1"></li>
+                  <li data-target="#discography__carousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <!-- Item 1 -->
+                  <div class="item active">
+                    <div class="cover-container">
+                      <div class="discography-member__icon">
+                         <img class="img-responsive" src="img/disc/TAoE_cover.jpg" alt="the age of entitlement cover">
+                      </div>
+                      <h2 class="discography-member__title global-text-color">
+                        The Age of Entitlement
+                      </h2>
+                      <h4 class="discography-member__subtitle">
+                        Released September 2014
+                      </h4>
+                      <p class="discography-member__summary g-line-height-lg">
+                           <div class="table mb1 rounded"
+						      v-component="plangular" v-src="'https://soundcloud.com/lo-fi-resistance/program'"
+						      v-class="player.playing == track ? 'bg-red-alpha' : 'bg-darken-2'">
+						      <div class="table-cell p1">
+						        <button class="button-icon" v-on="click: playPause()">
+						          <svg class="vhs-pop-in" v-if="player.playing != track" v-plangular-icon="'play'"></svg>
+						          <svg class="vhs-pop-in" v-if="player.playing == track" v-plangular-icon="'pause'"></svg>
+						        </button>
+						      </div>
+						      <h3 class="table-cell p1 full-width">{{ user.username }} - {{ title }}</h3>
+						      <small class="monospace h6 table-cell px1 nowrap">
+						        {{ currentTime | prettyTime }} / {{ duration | prettyTime }}
+						      </small>
+						   </div>
+                      </p>
+                      <div class="text-center">
+                        <h3>Purchase from:</h3>
+                        <!--<a href="https://itunes.apple.com/us/album/chalk-lines/id586076551" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from iTunes</a> -->
+                        <a href="https://www.burningshed.com/store/downloads/product/199/6127/" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Burning Shed</a>
+                        <a href="https://lofiresistance.bandcamp.com/album/the-age-of-entitlement" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Bandcamp</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="item">
+                    <div class="cover-container">
+                      <div class="discography-member__icon">
+                        <img class="img-responsive" src="img/disc/CL_cover.jpg" alt="chalk lines cover">
+                      </div>
+                      <h2 class="discography-member__title global-text-color">
+                        Chalk Lines
+                      </h2>
+                      <h3 class="discography-member__subtitle">
+                        Released December 2012
+                      </h3>
+                      <p class="discography-member__summary g-line-height-lg">
+                            <div class="table mb1 rounded"
+						      v-component="plangular" v-src="'https://soundcloud.com/lo-fi-resistance/the-silent-war'"
+						      v-class="player.playing == track ? 'bg-red-alpha' : 'bg-darken-2'">
+						      <div class="table-cell p1">
+						        <button class="button-icon" v-on="click: playPause()">
+						          <svg class="vhs-pop-in" v-if="player.playing != track" v-plangular-icon="'play'"></svg>
+						          <svg class="vhs-pop-in" v-if="player.playing == track" v-plangular-icon="'pause'"></svg>
+						        </button>
+						      </div>
+						      <h3 class="table-cell p1 full-width">{{ user.username }} - {{ title }}</h3>
+						      <small class="monospace h6 table-cell px1 nowrap">
+						        {{ currentTime | prettyTime }} / {{ duration | prettyTime }}
+						      </small>
+						    </div>
+                      </p>
+                      <div class="text-center">
+                        <h3>Purchase from:</h3>
+                        <a href="https://itunes.apple.com/us/album/chalk-lines/id586076551" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from iTunes</a>
+                        <a href="http://lofiresistance.bandcamp.com/album/chalk-lines" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Bandcamp</a>
+                        <a href="https://www.burningshed.com/store/lofiresistance/" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Burning Shed</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="item">
+                    <div class="cover-container">
+                      <div class="discography-member__icon">
+                        <img class="img-responsive" src="img/disc/ADB_cover.jpg" alt="a deep breath cover">
+                      </div>
+                      <h2 class="discography-member__title global-text-color">
+                        A Deep Breath
+                      </h2>
+                      <h3 class="discography-member__subtitle">
+                        Released April 2010
+                      </h3>
+                      <p class="discography-member__summary g-line-height-lg">
+						    <div class="table mb1 rounded"
+						      v-component="plangular" v-src="'https://soundcloud.com/lo-fi-resistance/too-simple'"
+						      v-class="player.playing == track ? 'bg-red-alpha' : 'bg-darken-2'">
+						      <div class="table-cell p1">
+						        <button class="button-icon" v-on="click: playPause()">
+						          <svg class="vhs-pop-in" v-if="player.playing != track" v-plangular-icon="'play'"></svg>
+						          <svg class="vhs-pop-in" v-if="player.playing == track" v-plangular-icon="'pause'"></svg>
+						        </button>
+						      </div>
+						      <h3 class="table-cell p1 full-width">{{ user.username }} - {{ title }}</h3>
+						      <small class="monospace h6 table-cell px1 nowrap">
+						        {{ currentTime | prettyTime }} / {{ duration | prettyTime }}
+						      </small>
+						    </div>
+                      </p>
+                      <div class="text-center">
+                        <h3>Purchase from:</h3>
+                        <a href="https://itunes.apple.com/us/album/a-deep-breath/id365830014" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from iTunes</a>
+                        <a href="http://lofiresistance.bandcamp.com/album/a-deep-breath" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Bandcamp</a>
+                        <a href="http://amzn.com/B003FGK2PY" class="btn btn-transparent discography-member__btn" target="_blank">Purchase from Amazon</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#discography__carousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#discography__carousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tour screen -->
+    <div class="site-wrapper site-wrapper_feedback screen" id="tour">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h2 class="title">
+            Tour Dates
+          </h2>
+          <p class="title__sub-text">
+
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-md-offset-1">
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">10.10.14</span>
+                  Tioga Trails Cafe
+                </h2>
+                <div class="tour-item__summary">
+                  <a href="https://lofiresistance.ticketleap.com/owego/dates/Oct-10-2014_at_0930PM" class="btn btn-transparent discography-member__btn" target="_blank">Purchase tickets</a>
+                  <a href="https://www.google.ca/maps/dir//Tioga+Trails+Cafe,+50+Lake+St,+Owego,+NY+13827,+United+States/@42.103772,-76.261695,17z/data=!4m12!1m3!3m2!1s0x89da9750782cf8e1:0x2bbb152d9593d1f8!2sTioga+Trails+Cafe!4m7!1m0!1m5!1m1!1s0x89da9750782cf8e1:0x2bbb152d9593d1f8!2m2!1d-76.261695!2d42.103772" class="btn btn-transparent discography-member__btn" target="_blank">Directions</a>
+                  <a href="https://lofiresistance.ticketleap.com/owego/dates/Oct-10-2014_at_0930PM" class="btn btn-transparent discography-member__btn" target="_blank"><div class="fb-like" data-href="https://www.facebook.com/events/852069811484759" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></a>
+
+              </div>
+                         <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">05.29.15</span>
+                  House Concert. Binghamton, NY
+                </h2>
+
+              </div>
+                         <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">05.31.15</span>
+                   House Concert. Sellersville, PA.
+                </h2>
+
+              </div>
+
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5">
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">10.11.14</span>
+                  NJ Proghouse @ Roxy And Dukes
+                </h2>
+<div class="tour-item__summary">
+                  <a href="http://www.njproghouse.com/homecoming-weekend-2014/" class="btn btn-transparent discography-member__btn" target="_blank">Purchase tickets</a>
+                  <a href="https://www.google.ca/maps/place/Roxy+%26+Dukes/@40.587113,-74.47415,17z/data=!3m1!4b1!4m2!3m1!1s0x89c3b91fb258a00f:0x6d532f1433c7e5f7" class="btn btn-transparent discography-member__btn" target="_blank">Directions</a>
+                  <a href="https://lofiresistance.ticketleap.com/owego/dates/Oct-10-2014_at_0930PM" class="btn btn-transparent discography-member__btn" target="_blank"><div class="fb-like" data-href="https://www.facebook.com/events/852069811484759" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></a>
+              </div>
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">05.30.15</span>
+                  The Pines Pavillion. Endicott, NY                </h2>
+<div class="tour-item__summary">
+                  <a href="http://www.thepinespavilion.com/EVENTS" class="btn btn-transparent discography-member__btn" target="_blank">Purchase tickets</a>
+                  <a href="https://www.google.ca/maps/place/Roxy+%26+Dukes/@40.587113,-74.47415,17z/data=!3m1!4b1!4m2!3m1!1s0x89c3b91fb258a00f:0x6d532f1433c7e5f7" class="btn btn-transparent discography-member__btn" target="_blank">Directions</a>
+                  <a href="https://lofiresistance.ticketleap.com/owego/dates/Oct-10-2014_at_0930PM" class="btn btn-transparent discography-member__btn" target="_blank"><div class="fb-like" data-href="https://www.facebook.com/events/852069811484759" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></a>
+              </div>
+                            <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">06.03.15</span>
+                  The Bitter End. New York, NY
+                </h2>
+<div class="tour-item__summary">
+                  <a href="http://www.bitterend.com/" class="btn btn-transparent discography-member__btn" target="_blank">Purchase tickets</a>
+                  <a href="https://www.google.ca/maps/place/Roxy+%26+Dukes/@40.587113,-74.47415,17z/data=!3m1!4b1!4m2!3m1!1s0x89c3b91fb258a00f:0x6d532f1433c7e5f7" class="btn btn-transparent discography-member__btn" target="_blank">Directions</a>
+                  <a href="https://lofiresistance.ticketleap.com/owego/dates/Oct-10-2014_at_0930PM" class="btn btn-transparent discography-member__btn" target="_blank"><div class="fb-like" data-href="https://www.facebook.com/events/852069811484759" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+            </div>
+        <!--
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-md-offset-1">
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">01.11.14</span>
+                  Madison Square Garden
+                </h2>
+                <div class="tour-item__summary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5">
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">11.11.14</span>
+                  The Theater
+                </h2>
+                <div class="tour-item__summary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-md-offset-1">
+              <div class="tour__item">
+                <h2 class="tour-item__title">
+                  <span class="global-text-color">11.21.14</span>
+                  Bobs
+                </h2>
+                <div class="tour-item__summary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at scelerisque diam, ut pellentesque leo. Morbi lacinia ut nibh eget euismod. Donec molestie odio sed leo interdum ultrices.
+                </div>
+              </div>
+            </div> -->
+            <div class="col-sm-6 col-md-5">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact screen -->
+    <div class="site-wrapper site-wrapper_contact screen" id="contact-us">
+      <div class="site-wrapper__inner">
+        <div class="cover-container">
+          <h2 class="title">
+            Where to <span class="global-text-color">connect</span>
+          </h2>
+          <p class="title__sub-text">
+            Below are the official mediums to connect with Lo-Fi Resistance to stay up-to-date with the latest information.
+          </p>
+        </div>
+        <div class="container">
+          <div class="col-xs-6 col-sm-3">
+            <div class="contact__info g-line-height-lg">
+              <h4 class="contact-info__title">Facebook:</h4>
+              Join our Facebook page to stay even more connected!
+
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=176992699059754&version=v2.0";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like" data-href="https://www.facebook.com/lofiresistance" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="contact__info g-line-height-lg">
+              <h4 class="contact-info__title">YouTube</h4>
+              	<iframe allowfullscreen="" frameborder="0" height="200px" src="http://www.youtube.com/embed/4UYwzEPJ15g?wmode=opaque" width="100%"></iframe></p>
+              <h4 class="contact-info__title">SoundCloud:</h4>
+			  	<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F68937858&show_artwork=true"></iframe>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+          <div class="contact__info g-line-height-lg">
+              <h4 class="contact-info__title">Mailing List</h4>
+
+							<!-- Begin MailChimp Signup Form -->
+							<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+							<style type="text/css">
+								#mc_embed_signup{color: black }
+								/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+								   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+							</style>
+							<div id="mc_embed_signup">
+							<form action="http://lofiresistance.us8.list-manage.com/subscribe/post?u=e3def48459a3bbf544ce9d81b&amp;id=23d147a872" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+							<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+							<div class="mc-field-group">
+								<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+							</label>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+							</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_e3def48459a3bbf544ce9d81b_23d147a872" value=""></div>
+								<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+							</form>
+							</div>
+
+							    <script src="js/mailchimp.js"></script>
+
+							<!--End mc_embed_signup-->
+
+
+          </div>							                <div class="hidden-xs musicindex"><h4>© 2014 by Lo-Fi Resistance. All rights reserved.</br> Designed and hosted by <a href="http://snailface.com"><span class="global-text-color">Andrew Whey</span></a>.</h4></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/scrolltopcontrol.js"></script>
+    <script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-6741184-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+	/* ]]> */
+	</script>
+
+    <script> var vm = new Vue({ el: '#vm' }); </script>
+
+  </body>
+</html>
